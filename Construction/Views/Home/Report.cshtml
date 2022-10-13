@@ -1,0 +1,15 @@
+﻿@model List<Construction.Models.ViewModel.PersonaViewModel>
+@{
+    Layout = null;
+}
+
+<div>
+    @foreach (var persona in Model)
+     {
+        <div style="color: blue;">
+            @persona.Nombre @persona.Edad @persona.Email
+        </div>
+     }
+</div>
+
+@*usar col-xs para que agarre en los divs*@

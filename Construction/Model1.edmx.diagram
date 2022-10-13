@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e07447a2d4ff4c778885e9f98357efb8" Name="Diagram1">
+        <EntityTypeShape EntityType="DB_CONSTRUCTIONModel.Albaniles" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_CONSTRUCTIONModel.Arquitectos" Width="1.5" PointX="3.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_CONSTRUCTIONModel.Contratistas" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_CONSTRUCTIONModel.ContratosCon_Alb" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_CONSTRUCTIONModel.ContratosCon_Arq" Width="1.5" PointX="6" PointY="2.625" IsExpanded="true" />
+        <AssociationConnector Association="DB_CONSTRUCTIONModel.fk_codigoAlb" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_CONSTRUCTIONModel.fk_codigoAr" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_CONSTRUCTIONModel.fk_codigoC" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_CONSTRUCTIONModel.fk_codigoCon" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
