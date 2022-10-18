@@ -6,75 +6,127 @@
     <link rel="stylesheet" href="~/Content/css/albanil.css" />
 }
 
-<h2>Details</h2>
+<h2>@Html.DisplayFor(model => model.nombreCompleto)</h2>
 
-<div>
-    <h4>Albaniles</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.nombreCompleto)
-        </dt>
+<div id="user-profile-2" class="user-profile">
+    <div class="tabbable">
+        <ul class="nav nav-tabs padding-18">
+            <li class="active">
 
-        <dd>
-            @Html.DisplayFor(model => model.nombreCompleto)
-        </dd>
+            </li>
+        </ul>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.foto)
-        </dt>
+        <div class="tab-content no-border padding-24">
+            <div id="home" class="tab-pane in active">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-3 center">
+                        <span class="profile-picture">
+                            <img class="editable img-responsive" alt=" Avatar" id="avatar2" src="https://cdn-icons-png.flaticon.com/512/2421/2421989.png">
+                        </span>
 
-        <dd>
-            @Html.DisplayFor(model => model.foto)
-        </dd>
+                        <div class="space space-4"></div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ciudad)
-        </dt>
+                    </div><!-- /.col -->
 
-        <dd>
-            @Html.DisplayFor(model => model.ciudad)
-        </dd>
+                    <div class="col-xs-12 col-sm-9">
+                        <br />
+                        <div class="profile-user-info">
+                            <div class="profile-info-row">
+                                <div class="profile-info-name">Nombre Completo</div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.domicilio)
-        </dt>
+                                <div class="profile-info-value">
+                                    <span>@Html.DisplayFor(model => model.nombreCompleto)</span>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="profile-info-row">
+                                <div class="profile-info-name">Ciudad</div>
 
-        <dd>
-            @Html.DisplayFor(model => model.domicilio)
-        </dd>
+                                <div class="profile-info-value">
+                                    <i class="fa fa-map-marker light-orange bigger-110"></i>
+                                    <span>@Html.DisplayFor(model => model.ciudad)</span>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="profile-info-row">
+                                <div class="profile-info-name">Dirección</div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.aniosExpe)
-        </dt>
+                                <div class="profile-info-value">
+                                    <span>@Html.DisplayFor(model => model.domicilio)</span>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="profile-info-row">
+                                <div class="profile-info-name">Años de experiencia</div>
 
-        <dd>
-            @Html.DisplayFor(model => model.aniosExpe)
-        </dd>
+                                <div class="profile-info-value">
+                                    <span>@Html.DisplayFor(model => model.aniosExpe) años</span>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="profile-info-row">
+                                <div class="profile-info-name">Numero de Telefono</div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.telefono)
-        </dt>
+                                <div class="profile-info-value">
+                                    <span>@Html.DisplayFor(model => model.telefono)</span>
+                                    <br />
+                                </div>
+                            </div>
+                            <br />
+                            <div class="profile-info-row">
+                                <div class="profile-info-name">Correo</div>
 
-        <dd>
-            @Html.DisplayFor(model => model.telefono)
-        </dd>
+                                <div class="profile-info-value">
+                                    <span>@Html.DisplayFor(model => model.correo)</span>
+                                </div>
+                            </div>
+                            <br />
+                        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.correo)
-        </dt>
+                        <div class="hr hr-8 dotted"></div>
 
-        <dd>
-            @Html.DisplayFor(model => model.correo)
-        </dd>
+                        <div class="profile-user-info">
+                            <div class="profile-info-row">
+                                <div class="profile-info-name"> </div>
 
-    </dl>
+                                <div class="profile-info-value">
+                                    <a href="#" target="_blank"></a>
+                                </div>
+                            </div>
+
+                            <div class="profile-info-row">
+                                <div class="profile-info-name">
+                                    <i class="middle ace-icon fa fa-facebook-square bigger-150 blue"></i>
+                                </div>
+
+                                <div class="profile-info-value">
+                                    <a href="#"></a>
+                                </div>
+                            </div>
+
+                            <div class="profile-info-row">
+                                <div class="profile-info-name">
+                                    <i class="middle ace-icon fa fa-twitter-square bigger-150 light-blue"></i>
+                                </div>
+
+                                <div class="profile-info-value">
+                                    <a href="#"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+
+                <div class="space-20"></div>
+
+            </div><!-- /#home -->
+        </div>
+    </div>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.codigoAl }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
-
 
 <button type="button" class="btn btn-success dropdown-toggle"
         aria-haspopup="true" aria-expanded="false"
