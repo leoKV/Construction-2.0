@@ -137,6 +137,10 @@
     Contratar
 </button>
 
+
+
+
+
 <div id="modal_contratar_arquitecto" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -144,7 +148,8 @@
                 <h4 class="modal-title">Detalles de Contratación</h4>
             </div>
             <div class="modal-body">
-                <img src="https://0.academia-photos.com/attachment_thumbnails/35383700/mini_magick20180815-27276-1qfeeig.png?1534391197" width="100%" />
+                @*<iframe src="https://localhost:44346/Home/Report"></iframe>*@
+                <h2 style="color:black">@Html.DisplayFor(model => model.nombreCompleto)</h2>
             </div>
             <div class="modal-footer">
                 <button class="btn btn-danger" data-dismiss="modal">Cerrar</button> <button type="button" class="btn btn-success dropdown-toggle"
@@ -181,7 +186,8 @@
 </div>
 
 <script>
-  cerrarModals= function(){
-    window.location.href="https://localhost:44346/Contratistas";
-}
+    cerrarModals = function () {
+      window.location.href = "https://localhost:44346/Contratistas";
+    }
+    /*window.location.href = "https://localhost:44346/home/Print";*/
 </script>

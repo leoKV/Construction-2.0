@@ -32,7 +32,7 @@ namespace Construction.Controllers
         public ActionResult Report()
         {
             List<PersonaViewModel> lst = new List<PersonaViewModel>();
-            lst.Add(new PersonaViewModel() { Nombre="Héctor",Edad=31,Email="algo@gmail.com"});
+            lst.Add(new PersonaViewModel() { Nombre = "Héctor", Edad = 31, Email = "algo@gmail.com" });
             lst.Add(new PersonaViewModel() { Nombre = "Héctor 2", Edad = 31, Email = "algo@gmail.com" });
             lst.Add(new PersonaViewModel() { Nombre = "Héctor 3", Edad = 31, Email = "algo@gmail.com" });
             lst.Add(new PersonaViewModel() { Nombre = "Héctor 4", Edad = 31, Email = "algo@gmail.com" });
@@ -40,11 +40,14 @@ namespace Construction.Controllers
             return View(lst);
         }
 
-
+        public ActionResult ContratosAr()
+        {
+            return View();
+        }
         public ActionResult Print()
         {
-            return new ActionAsPdf("Report")
-            { FileName = "Reporte.pdf" };
+            return new ActionAsPdf("Report");
+            //{ FileName = "Reporte.pdf" };
         }
 
         public ActionResult PrintHome()

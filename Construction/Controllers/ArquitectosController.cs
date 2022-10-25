@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Construction;
+using Rotativa;
 
 namespace Construction.Controllers
 {
@@ -19,7 +20,11 @@ namespace Construction.Controllers
         {
             return View(db.Arquitectos.ToList());
         }
-
+        //Generar PDF del contrato
+        //public ActionResult Print()
+        //{
+        //    return new ActionAsPdf("Index");
+        //}
         // GET: Arquitectos/Details/5
         public ActionResult Details(int? id)
         {
@@ -35,12 +40,29 @@ namespace Construction.Controllers
             return View(arquitectos);
         }
 
+        public ActionResult Detalles(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Arquitectos arquitectos = db.Arquitectos.Find(id);
+            if (arquitectos == null)
+            {
+                return HttpNotFound();
+            }
+            return View(arquitectos);
+        }
         // GET: Arquitectos/Create
         public ActionResult Create()
         {
             return View();
         }
 
+        public ActionResult Contrato()
+        {
+            return View();
+        }
         // POST: Arquitectos/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
@@ -123,5 +145,6 @@ namespace Construction.Controllers
             }
             base.Dispose(disposing);
         }
+
     }
 }
